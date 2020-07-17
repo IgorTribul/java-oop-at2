@@ -11,19 +11,15 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.2.0</version>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
                 <configuration>
-                    <archive>
-                        <manifest>
-                            <mainClass>ru.geekbrains.java.oop.at2.Start</mainClass>
-                        </manifest>
-                    </archive>
+                    <encoding>UTF-8</encoding>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
-
             </plugin>
         </plugins>
-
     </build>
 
     <dependencies>
@@ -33,14 +29,10 @@
             <version>3.141.59</version>
         </dependency>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13</version>
-            <scope>test</scope>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.6.2</version>
         </dependency>
     </dependencies>
-
-
-
 
 </project>
