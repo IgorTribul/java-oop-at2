@@ -53,4 +53,9 @@ public class FirstTest extends BasicNavigation {
 
 //        chromeDriver.findElement(By.cssSelector("[id=\"top-menu\"] h2")).getSize()
     }
+    @Test
+    public void checkTopMenu2() throws InterruptedException {
+        String name = "courses";
+        System.out.println(chromeDriver.findElement(By.cssSelector("[id=\"nav\"] [href=\"courses\"]")));
+    }
 }

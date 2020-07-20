@@ -24,9 +24,9 @@ public class BasicSearch {
         chromeDriver.manage().timeouts().pageLoadTimeout (30, TimeUnit.SECONDS);
         chromeDriver.manage().timeouts().setScriptTimeout(30, TimeUnit.SECONDS);
 
-        chromeDriver.get("https://geekbrains.ru/courses");
+        chromeDriver.get("https://geekbrains.ru/tests");
         chromeDriver.findElement(
-                By.cssSelector("div button[class=\"c9e3 _311d\"] [class=\"svg-icon icon-popup-close-button \"]")).click();
+                By.cssSelector("[class=\"svg-icon icon-popup-close-button \"]")).click();
         chromeDriver.findElement(By.cssSelector("[class=\"show-search-form\"] [class=\"svg-icon icon-search \"]")).click();
         chromeDriver.findElementByCssSelector("input[class=\"search-panel__search-field\"]")
                 .sendKeys("java");
