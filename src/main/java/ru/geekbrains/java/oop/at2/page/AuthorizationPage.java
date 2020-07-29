@@ -7,14 +7,14 @@ import org.openqa.selenium.support.PageFactory;
 
 public class AuthorizationPage {
 
-    @FindBy(css = "[placeholder=\"Email\"]")
+    @FindBy(css = "[data-testid=\"login-email\"]")
     private WebElement inputLogin;
 
 
     @FindBy(css = "[placeholder=\"Пароль\"]")
     private WebElement inputPassword;
 
-    @FindBy(css = "[id=\"registration-form-button\"]")
+    @FindBy(css = "[class=\"btn btn-block btn-success\"]")
     private WebElement buttonSingIn;
 
 

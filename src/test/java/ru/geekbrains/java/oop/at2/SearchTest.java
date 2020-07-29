@@ -1,6 +1,7 @@
 package ru.geekbrains.java.oop.at2;
 
 import org.hamcrest.MatcherAssert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -33,11 +34,13 @@ public class SearchTest extends BaseWebTest {
 //        chromeDriver.findElement(By.cssSelector("[class=\"show-search-form\"] [class=\"svg-icon icon-search \"]")).click();
 //        chromeDriver.findElementByCssSelector("input[class=\"search-panel__search-field\"]")
 //                .sendKeys("java");
+
     @ParameterizedTest
     @MethodSource("dataProvider")
     public void courses(String namePage) {
         SearchElements searchElements = new  SearchElements(driver);
-        wait15second.until(ExpectedConditions.textToBePresentInElement(searchElements.getSearchName(namePage), namePage));
+        Assertions.assertEquals(searchElements.getSearchName(namePage).getText(), namePage);
+//        wait15second.until(ExpectedConditions.textToBePresentInElement(searchElements.getSearchName(namePage), namePage));
 
         searchElements.checkCounts(namePage);
 //        ContentPage contentPage = new ContentPage(driver);

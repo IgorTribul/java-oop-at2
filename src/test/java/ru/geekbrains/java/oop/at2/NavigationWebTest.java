@@ -1,5 +1,7 @@
 package ru.geekbrains.java.oop.at2;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Step;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -28,9 +30,11 @@ public class NavigationWebTest extends BaseWebTest {
                 contentPage.getFooter()));
     }
 
+    @Feature("Первые шаги в автоматизации")
 
     @ParameterizedTest
     @MethodSource("dataProvider")
+    @Step("проверка названия страницы")
     public void courses(String namePage) {
         ContentPage contentPage = new ContentPage(driver);
         contentPage.getNavigation().getButton(namePage).click();

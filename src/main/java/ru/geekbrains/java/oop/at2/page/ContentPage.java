@@ -24,17 +24,17 @@ public class ContentPage extends PageFactory {
     @FindBy(css = "button [class=\"svg-icon icon-popup-close-button \"]")
     private WebElement buttonClosePopUp2;
 
-    @FindBy(css = "[class=\"show-search-form\"] [class=\"svg-icon icon-search \"]")
+    @FindBy(css = "[class=\"gb-top-menu__item\"] [class=\"svg-icon icon-search \"]")
     private WebElement iconSearch;
 
 
     @FindBy(css = "[class=\"search-panel__search-field\"]")
     private WebElement inputInSearchField;
 
-    @FindBy(xpath = "//*[@id=\"filter-0\"]")
+    @FindBy(css = "[class=\"checkbox checkbox-primary\"] [for=\"filter-0\"]")
     private WebElement checkboxFree;
 
-    @FindBy(css = "[value=\"tester\"]")
+    @FindBy(css = "[class=\"checkbox checkbox-primary\"] [for=\"filter-9\"]")
     private WebElement checkboxTester;
 
     @FindBy(xpath = "//*[text()='Тестирование ПО. Уровень 1']")

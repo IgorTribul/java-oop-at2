@@ -14,19 +14,24 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
 public class SearchElements extends PageFactory{
+
+    private Navigation navigation;
+
     public SearchElements(WebDriver driver) {
-        initElements(driver, this);}
+        initElements(driver, this);
+        navigation = new Navigation(driver);
+    }
 
 
     @FindBy (css = "[id=\"professions\"] h2")    private WebElement professions;
     @FindBy (xpath = ".//header/h2[text()='Вебинары']")    private WebElement events ;
     @FindBy (xpath = ".//header/h2[text()='Блоги']")    private WebElement blogs;
-    @FindBy (xpath = ".//header/h2[text()='Форум']")    private WebElement forum;
+    @FindBy (xpath = "//*/h2[text()='Форум']")    private WebElement forum;
     @FindBy (xpath = ".//header/h2[text()='Тесты']")    private WebElement tests;
     @FindBy (xpath = ".//header/h2[text()='Проекты и компании']")    private WebElement projectAndCompany;
 
     @FindBy (xpath = "//a[@class='search-page-block__more' and @data-tab='professions']/span") private WebElement professionsCount;
-    @FindBy (xpath = "/html/body/div[1]/div[7]/div/div[1]/div/ul/li[4]/a/span") private WebElement eventsCount;
+    @FindBy (xpath = "//a[@class='search-page-block__more' and @data-tab=\"webinars\"]/span") private WebElement eventsCount;
     @FindBy (xpath = "//a[@class='search-page-block__more' and @data-tab='blogs']/span") private WebElement blogsCount;
     @FindBy (xpath = "//a[@class='search-page-block__more' and @data-tab='forums']/span") private WebElement forumsCount;
     @FindBy (xpath = "//a[@class='search-page-block__more' and @data-tab='tests']/span") private WebElement testsCount;

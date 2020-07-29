@@ -27,7 +27,7 @@ import org.openqa.selenium.support.PageFactory;
 
 
 
-        @FindBy(css = "[id=\"cour-link\"]")
+        @FindBy(css = "[class=\"nav nav-tabs js-offset-top hidden-xs callback-shown\"] [href=\"#cour-new\"]")
         private WebElement buttonAllCourses;
 
 
